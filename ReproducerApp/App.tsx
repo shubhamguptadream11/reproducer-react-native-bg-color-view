@@ -7,7 +7,7 @@ import {
 
 /**
  * Repro for bug with View and Text losing backgroundColor on iOS, when
- * borderStyle is "dashed" or "dotted" and borderWidth is 0.
+ * borderStyle is "dashed" or "dotted".
  */
 
 export default function App() {
@@ -33,10 +33,8 @@ const styles = StyleSheet.create({
     width: 200,
     height: 100,
     backgroundColor: 'red',
-    borderStyle: 'dashed', //  repros bug with borderWidth: 0
-    // borderStyle: 'dotted', // repros bug with borderWidth: 0
+    borderStyle: 'dashed', //  repros bug
+    // borderStyle: 'dotted', // repros bug
     // borderStyle: 'solid', // works fine
-    // borderWidth: 0, //  repros bug with borderStyle: "dashed" or "dotted"
-    // borderWidth: 0.1, // works fine
   },
 });
